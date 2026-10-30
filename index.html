@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME | IPL 2026 Ticket Booking</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>IPL 2026 Ticket Booking</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#matches">Matches</a></li>
+                <li><a href="#book">Book Tickets</a></li>
+                <li><a href="#booking">My Booking</a></li>
+                <li><a href="#guidelines">Guidelines</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home">
+            <img src="ipl_logo.png" alt="IPL Logo" width="200">
+
+            <h2>Welcome to IPL 2026!</h2>
+
+            <p>
+                Welcome to the IPL 2026 Ticket Booking website!
+                Here you can find information about upcoming matches,
+                book your tickets, and manage your bookings.
+                Please follow the guidelines for a smooth booking experience.
+            </p>
+
+            <a href="#matches">
+                <button type="button">View Schedule</button>
+            </a>
+
+            <a href="#book">
+                <button type="button">Book Tickets</button>
+            </a>
+        </section>
+
+        <section>
+            <h2>Popular Teams</h2>
+
+            <ul>
+                <li>Chennai Super Kings</li>
+                <li>Mumbai Indians</li>
+                <li>Royal Challengers Bengaluru</li>
+                <li>Delhi Capitals</li>
+                <li>Kolkata Knight Riders</li>
+                <li>Sunrisers Hyderabad</li>
+                <li>Rajasthan Royals</li>
+                <li>Punjab Kings</li>
+            </ul>
+        </section>
+
+        <section id="matches">
+            <h2>Upcoming Matches</h2>
+
+            <table border="1">
+                <caption>IPL 2026 Match Schedule</caption>
+
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Teams</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>March 1, 2026</td>
+                        <td>Chennai Super Kings vs Mumbai Indians</td>
+                        <td>Chennai</td>
+                    </tr>
+
+                    <tr>
+                        <td>March 5, 2026</td>
+                        <td>RCB vs Delhi Capitals</td>
+                        <td>Bengaluru</td>
+                    </tr>
+
+                    <tr>
+                        <td>March 10, 2026</td>
+                        <td>Mumbai Indians vs Kolkata Knight Riders</td>
+                        <td>Mumbai</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="book">
+            <h2>Book Your Tickets</h2>
+
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <br><br>
+
+                <label>Select Match:</label>
+                <br>
+
+                <input type="radio" id="match1" name="match" value="CSK vs MI" required>
+                <label for="match1">CSK vs MI</label>
+                <br>
+
+                <input type="radio" id="match2" name="match" value="RCB vs DC">
+                <label for="match2">RCB vs DC</label>
+                <br>
+
+                <input type="radio" id="match3" name="match" value="MI vs KKR">
+                <label for="match3">MI vs KKR</label>
+                <br><br>
+
+                <label for="tickets">Number of Tickets:</label>
+                <input type="number" id="tickets" min="1" max="10">
+                <br><br>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+
+        <section id="booking">
+            <h2>My Booking</h2>
+
+            <p>Check your ticket booking details using your booking ID.</p>
+
+            <label for="bookingid">Booking ID:</label>
+            <input type="text" id="bookingid" placeholder="Enter Booking ID">
+
+            <button type="button">Check Booking</button>
+        </section>
+
+        <section id="guidelines">
+            <h2>Booking Guidelines</h2>
+
+            <ol>
+                <li>Enter your correct personal details.</li>
+                <li>Select your preferred IPL match.</li>
+                <li>Choose the number of tickets.</li>
+                <li>Check all booking details before submitting.</li>
+                <li>Carry your ticket while entering the stadium.</li>
+                <li>Follow stadium rules and regulations.</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>IPL 2026 Ticket Booking</h3>
+
+        <p>Enjoy the excitement of cricket!</p>
+
+        <p>Contact: support@iplbooking.com</p>
+
+        <p>&copy; 2026 IPL Ticket Booking. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
