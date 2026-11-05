@@ -1,0 +1,329 @@
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Universal Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0b1020;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+/* Header */
+header {
+    background: rgba(15, 20, 40, 0.95);
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid #292e4a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #ff7a18;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d6d9e8;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff7a18;
+}
+
+/* Main Sections */
+main section {
+    padding: 70px 10%;
+    margin: 30px auto;
+    max-width: 1400px;
+}
+
+/* Welcome Section */
+#home {
+    min-height: 420px;
+    background: linear-gradient(
+        135deg,
+        #21104d,
+        #45208c,
+        #151c3b
+    );
+    border-radius: 25px;
+    padding: 65px 8%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+#home img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+#home h2 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#home p {
+    max-width: 700px;
+    color: #d8d7f2;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(135deg, #ff7a18, #ffb347);
+    color: #111;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 8px 8px 8px 0;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 122, 24, 0.3);
+}
+
+/* Section Headings */
+section h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ff9b3d;
+    font-weight: 700;
+}
+
+/* Popular Teams */
+section ul {
+    list-style: none;
+}
+
+section:not(#home):not(#matches):not(#book):not(#booking):not(#guidelines) ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+section:not(#home):not(#matches):not(#book):not(#booking):not(#guidelines) li {
+    background: #171d35;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #292e4a;
+    transition: 0.3s;
+}
+
+section:not(#home):not(#matches):not(#book):not(#booking):not(#guidelines) li:hover {
+    background: #252d4b;
+    transform: translateY(-5px);
+}
+
+/* Match Schedule */
+#matches {
+    background: #131a30;
+    border-radius: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+caption {
+    padding: 15px;
+    color: #c8cde0;
+    font-size: 16px;
+}
+
+thead {
+    background: linear-gradient(135deg, #6d28d9, #9333ea);
+}
+
+th {
+    padding: 18px;
+    text-align: left;
+    color: white;
+}
+
+td {
+    padding: 18px;
+    border-bottom: 1px solid #292e4a;
+    color: #d6d9e8;
+}
+
+tbody tr {
+    background: #171d35;
+    transition: 0.3s;
+}
+
+tbody tr:hover {
+    background: #252d4b;
+}
+
+/* Booking Form */
+#book {
+    background: #131a30;
+    border-radius: 20px;
+}
+
+form {
+    max-width: 650px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #dce0f2;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 22px;
+    background: #0b1020;
+    border: 1px solid #303957;
+    border-radius: 10px;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #9333ea;
+    box-shadow: 0 0 10px rgba(147, 51, 234, 0.2);
+}
+
+input::placeholder {
+    color: #7f88a5;
+}
+
+/* Match Radio Buttons */
+input[type="radio"] {
+    accent-color: #ff7a18;
+    margin: 10px 8px 10px 0;
+    cursor: pointer;
+}
+
+/* My Booking */
+#booking {
+    background: linear-gradient(135deg, #171d35, #222044);
+    border-radius: 20px;
+}
+
+#booking p {
+    color: #c8cde0;
+    margin-bottom: 25px;
+}
+
+/* Guidelines */
+#guidelines {
+    background: #131a30;
+    border-radius: 20px;
+}
+
+#guidelines ol {
+    padding-left: 25px;
+}
+
+#guidelines li {
+    color: #d6d9e8;
+    padding: 10px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 45px 20px;
+    background: #070b16;
+    border-top: 1px solid #292e4a;
+}
+
+footer h3 {
+    color: #ff7a18;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #8d96b3;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main section {
+        padding: 40px 6%;
+        margin: 20px 12px;
+    }
+
+    #home h2 {
+        font-size: 30px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    table {
+        min-width: 550px;
+    }
+
+    button {
+        width: 100%;
+        margin: 8px 0;
+    }
+}
