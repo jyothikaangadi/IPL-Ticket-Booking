@@ -1,12 +1,9 @@
 
-/* ==========================================
-   GENERAL STYLING
-========================================== */
-
+/* GENERAL */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -15,207 +12,293 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f6f9;
     color: #222;
     line-height: 1.6;
 }
 
+section {
+    padding: 40px 6%;
+    margin: 20px auto;
+}
 
-/* ==========================================
-   HEADER & NAVIGATION
-========================================== */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
 
-header {
+h2 {
+    color: #b30000;
+}
+
+/* NAVBAR FLEXBOX */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #111;
     color: white;
-    text-align: center;
-    padding: 20px;
+    padding: 12px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header h1 {
-    color: #ff6b00;
-    margin-bottom: 15px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-nav ul {
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
     list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #ff6b00;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    background: linear-gradient(135deg, #b30000, #ff6b00);
+    color: white;
+    padding: 80px 20px;
+    margin: 0;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero-buttons {
     display: flex;
     justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
-nav ul li a {
-    color: white;
+.btn {
+    background-color: white;
+    color: #b30000;
+    padding: 12px 22px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #ff6b00;
+.btn:hover {
+    background-color: #eee;
 }
 
-
-/* ==========================================
-   SECTIONS
-========================================== */
-
-section {
-    padding: 40px 20px;
-    margin: 20px auto;
-    max-width: 1100px;
-    text-align: center;
-    background-color: white;
-    border-radius: 10px;
+/* TEAMS FLEXBOX */
+.teams-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-section h2 {
-    color: #b30000;
-    margin-bottom: 20px;
-}
-
-
-/* ==========================================
-   HOME SECTION
-========================================== */
-
-#home img {
-    margin-bottom: 20px;
-}
-
-#home p {
-    max-width: 800px;
-    margin: 15px auto 25px;
-}
-
-#home button {
-    margin: 10px;
-}
-
-
-/* ==========================================
-   POPULAR TEAMS
-========================================== */
-
-#teams ul {
-    list-style: none;
-}
-
-#teams ul li {
-    padding: 5px;
-}
-
-
-/* ==========================================
-   MATCH TABLE
-========================================== */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: white;
-}
-
-caption {
-    font-weight: bold;
-    padding: 10px;
-}
-
-th,
-td {
-    border: 1px solid #ccc;
-    padding: 12px;
-    text-align: center;
-}
-
-th {
-    background-color: #222;
+.team {
+    background-color: #b30000;
     color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 100px;
+    font-weight: bold;
+    transition: transform 0.3s;
 }
 
-tr:nth-child(even) {
-    background-color: #f5f5f5;
+.team:hover {
+    transform: translateY(-5px);
 }
 
+/* MATCH CONTROLS */
+.match-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
 
-/* ==========================================
-   BUTTONS
-========================================== */
+.filter-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
 
-button {
-    background-color: #ff6b00;
+.match-controls select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.view-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn {
+    background-color: #444;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 15px;
-    margin: 5px;
-    transition: 0.3s;
 }
 
-button:hover {
+.view-btn.active {
     background-color: #b30000;
 }
 
+/* MATCH GRID */
+.match-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
 
-/* ==========================================
-   BOOKING FORM
-========================================== */
-
-#bookingForm {
-    max-width: 550px;
-    margin: auto;
+.match-card {
+    background-color: white;
     padding: 25px;
-    text-align: left;
-    background-color: #f9f9f9;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #b30000;
+    transition: transform 0.3s;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+}
+
+.match-card h3 {
+    color: #b30000;
+    margin-bottom: 15px;
+}
+
+.match-card p {
+    margin-bottom: 10px;
+}
+
+/* LIST VIEW */
+.match-grid.list-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.match-grid.list-view .match-card {
+    width: 100%;
+}
+
+/* BUTTONS */
+button {
+    cursor: pointer;
+}
+
+.match-card button,
+form button,
+.booking-check button {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.match-card button:hover,
+form button:hover,
+.booking-check button:hover {
+    background-color: #8b0000;
+}
+
+/* BOOKING FORM */
+#bookingForm {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #bookingForm label {
     display: block;
+    margin-top: 15px;
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
 #bookingForm input,
 #bookingForm select {
     width: 100%;
     padding: 12px;
+    margin-top: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-top: 5px;
-    font-size: 15px;
 }
 
-#bookingForm input:focus,
-#bookingForm select:focus {
-    outline: 2px solid #ff6b00;
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
-#bookingForm button {
-    margin-top: 15px;
+.form-buttons button {
+    flex: 1;
 }
 
+.reset-btn {
+    background-color: #555 !important;
+}
 
-/* ==========================================
-   ACTIVITY 7 - SUMMARY CARD
-========================================== */
-
+/* SUMMARY CARD */
 #summaryCard {
-    max-width: 550px;
+    max-width: 600px;
     margin: 30px auto;
     padding: 25px;
-
     background-color: #fff4e8;
     border: 2px solid #ff6b00;
     border-radius: 12px;
-
     text-align: left;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-    transition: 0.3s ease;
 }
 
 #summaryCard h3 {
@@ -239,61 +322,65 @@ button:hover {
     font-weight: bold;
 }
 
+/* MY BOOKING */
+.booking-check {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+}
 
-/* ==========================================
-   MY BOOKING SECTION
-========================================== */
+.booking-check label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
-#booking input {
-    padding: 10px;
-    margin: 10px;
+.booking-check input {
+    width: 100%;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-
-/* ==========================================
-   GUIDELINES
-========================================== */
-
-#guidelines ol {
-    display: inline-block;
-    text-align: left;
+/* GUIDELINES GRID */
+.guidelines-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
 }
 
-#guidelines li {
-    margin: 8px 0;
+.guideline-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #ff6b00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
+.guideline-card h3 {
+    color: #b30000;
+    margin-bottom: 12px;
+}
 
-/* ==========================================
-   TOAST NOTIFICATION
-========================================== */
-
+/* TOAST */
 #toast {
     visibility: hidden;
-    opacity: 0;
-
+    min-width: 250px;
+    max-width: 90%;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 15px;
     position: fixed;
     bottom: 30px;
     left: 50%;
-
     transform: translateX(-50%);
-
-    background-color: #222;
-    color: white;
-
-    padding: 15px 25px;
-    border-radius: 8px;
-
-    min-width: 250px;
-    max-width: 90%;
-
-    text-align: center;
-
-    z-index: 9999;
-
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
 }
 
 #toast.show {
@@ -301,55 +388,121 @@ button:hover {
     opacity: 1;
 }
 
-
-/* ==========================================
-   FOOTER
-========================================== */
-
+/* FOOTER */
 footer {
     background-color: #111;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 20px;
     margin-top: 30px;
 }
 
-footer h3 {
-    color: #ff6b00;
-    margin-bottom: 10px;
+/* TABLET */
+@media screen and (max-width: 900px) {
+
+    .match-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .guidelines-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .navbar {
+        padding: 12px 4%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
 }
 
+/* MOBILE NAVIGATION */
+@media screen and (max-width: 650px) {
 
-/* ==========================================
-   RESPONSIVE DESIGN
-========================================== */
+    .navbar {
+        flex-wrap: wrap;
+    }
 
-@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
 
-    nav ul {
+    .nav-links {
+        display: none;
         flex-direction: column;
-        gap: 10px;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+        padding-top: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 12px;
+        border-top: 1px solid #444;
+    }
+
+    .match-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guidelines-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .match-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-control {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .view-buttons {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
     }
 
     section {
-        margin: 10px;
-        padding: 25px 15px;
-    }
-
-    table {
-        font-size: 13px;
-    }
-
-    th,
-    td {
-        padding: 6px;
+        padding: 30px 5%;
     }
 
     #bookingForm {
-        padding: 15px;
+        padding: 20px;
     }
 
-    #summaryCard {
-        padding: 15px;
+    .booking-check {
+        padding: 20px;
+    }
+
+    .match-card {
+        padding: 20px;
+    }
+}
+
+/* SMALL MOBILE */
+@media screen and (max-width: 400px) {
+
+    .logo span {
+        font-size: 18px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .view-buttons button {
+        padding: 8px 10px;
     }
 }
