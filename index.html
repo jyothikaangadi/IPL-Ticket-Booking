@@ -1,5 +1,4 @@
 
-<
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,27 +83,51 @@
                         <th>Date</th>
                         <th>Teams</th>
                         <th>Venue</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
 
                 <tbody>
+
                     <tr>
                         <td>March 1, 2026</td>
                         <td>Chennai Super Kings vs Mumbai Indians</td>
                         <td>Chennai</td>
+                        <td>
+                            <button type="button"
+                                class="book-btn"
+                                data-match="CSK vs MI">
+                                Book
+                            </button>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>March 5, 2026</td>
                         <td>RCB vs Delhi Capitals</td>
                         <td>Bengaluru</td>
+                        <td>
+                            <button type="button"
+                                class="book-btn"
+                                data-match="RCB vs DC">
+                                Book
+                            </button>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>March 10, 2026</td>
                         <td>Mumbai Indians vs Kolkata Knight Riders</td>
                         <td>Mumbai</td>
+                        <td>
+                            <button type="button"
+                                class="book-btn"
+                                data-match="MI vs KKR">
+                                Book
+                            </button>
+                        </td>
                     </tr>
+
                 </tbody>
 
             </table>
@@ -116,7 +139,7 @@
 
             <h2>Book Your Tickets</h2>
 
-            <form action="#" method="get">
+            <form id="bookingForm" action="#" method="get">
 
                 <!-- Name -->
                 <label for="name">Full Name:</label>
@@ -224,7 +247,9 @@
                 placeholder="Enter Booking ID"
             >
 
-            <button type="button">Check Booking</button>
+            <button type="button" id="checkBookingBtn">
+                Check Booking
+            </button>
 
         </section>
 
@@ -248,18 +273,11 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Toast Notification -->
+    <div id="toast" role="status" aria-live="polite"></div>
 
-        <h3>IPL 2026 Ticket Booking</h3>
-
-        <p>Enjoy the excitement of cricket!</p>
-
-        <p>Contact: support@iplbooking.com</p>
-
-        <p>© 2026 IPL Ticket Booking. All Rights Reserved.</p>
-
-    </footer>
+    <!-- JavaScript File -->
+    <script src="app.js"></script>
 
 </body>
 </html>
