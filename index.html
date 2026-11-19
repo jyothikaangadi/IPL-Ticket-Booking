@@ -5,12 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME | IPL 2026 Ticket Booking</title>
+    <title>IPL 2026 Ticket Booking</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
         <h1>IPL 2026 Ticket Booking</h1>
 
@@ -27,7 +28,7 @@
 
     <main>
 
-        <!-- Home Section -->
+        <!-- HOME SECTION -->
         <section id="home">
 
             <img src="ipl_logo.png" alt="IPL Logo" width="200">
@@ -51,8 +52,9 @@
 
         </section>
 
-        <!-- Popular Teams Section -->
-        <section>
+
+        <!-- POPULAR TEAMS -->
+        <section id="teams">
 
             <h2>Popular Teams</h2>
 
@@ -69,12 +71,13 @@
 
         </section>
 
-        <!-- Matches Section -->
+
+        <!-- MATCH SCHEDULE -->
         <section id="matches">
 
             <h2>Upcoming Matches</h2>
 
-            <table border="1">
+            <table>
 
                 <caption>IPL 2026 Match Schedule</caption>
 
@@ -134,15 +137,17 @@
 
         </section>
 
-        <!-- Ticket Booking Form - Activity 3 -->
+
+        <!-- TICKET BOOKING FORM -->
         <section id="book">
 
             <h2>Book Your Tickets</h2>
 
-            <form id="bookingForm" action="#" method="get">
+            <form id="bookingForm">
 
-                <!-- Name -->
+                <!-- NAME -->
                 <label for="name">Full Name:</label>
+
                 <input
                     type="text"
                     id="name"
@@ -154,8 +159,10 @@
 
                 <br><br>
 
-                <!-- Email -->
+
+                <!-- EMAIL -->
                 <label for="email">Email Address:</label>
+
                 <input
                     type="email"
                     id="email"
@@ -166,8 +173,10 @@
 
                 <br><br>
 
-                <!-- Phone Number -->
+
+                <!-- PHONE -->
                 <label for="phone">Phone Number:</label>
+
                 <input
                     type="tel"
                     id="phone"
@@ -180,7 +189,8 @@
 
                 <br><br>
 
-                <!-- Match Selection -->
+
+                <!-- MATCH SELECTION -->
                 <label for="match">Select Match:</label>
 
                 <select id="match" name="match" required>
@@ -194,7 +204,8 @@
 
                 <br><br>
 
-                <!-- Stand Category -->
+
+                <!-- STAND SELECTION -->
                 <label for="stand">Stand Category:</label>
 
                 <select id="stand" name="stand" required>
@@ -208,7 +219,8 @@
 
                 <br><br>
 
-                <!-- Number of Tickets -->
+
+                <!-- TICKET QUANTITY -->
                 <label for="tickets">Number of Tickets:</label>
 
                 <input
@@ -217,21 +229,57 @@
                     name="tickets"
                     min="1"
                     max="10"
-                    placeholder="Enter number of tickets"
+                    value="1"
                     required
                 >
 
                 <br><br>
 
+
+                <!-- BUTTONS -->
                 <button type="submit">Book Now</button>
 
                 <button type="reset">Reset Form</button>
 
             </form>
 
+
+            <!-- ACTIVITY 7: BOOKING SUMMARY CARD -->
+            <div id="summaryCard">
+
+                <h3>Booking Summary</h3>
+
+                <p>
+                    <strong>Match:</strong>
+                    <span id="summaryMatch">Not selected</span>
+                </p>
+
+                <p>
+                    <strong>Stand:</strong>
+                    <span id="summaryStand">Not selected</span>
+                </p>
+
+                <p>
+                    <strong>Tickets:</strong>
+                    <span id="summaryTickets">1</span>
+                </p>
+
+                <p>
+                    <strong>Price per Ticket:</strong>
+                    <span id="summaryPrice">₹0</span>
+                </p>
+
+                <h3 class="total-price">
+                    Total Price:
+                    <span id="summaryTotal">₹0</span>
+                </h3>
+
+            </div>
+
         </section>
 
-        <!-- My Booking Section -->
+
+        <!-- MY BOOKING -->
         <section id="booking">
 
             <h2>My Booking</h2>
@@ -253,7 +301,8 @@
 
         </section>
 
-        <!-- Guidelines Section -->
+
+        <!-- GUIDELINES -->
         <section id="guidelines">
 
             <h2>Booking Guidelines</h2>
@@ -273,10 +322,26 @@
 
     </main>
 
-    <!-- Toast Notification -->
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>IPL 2026 Ticket Booking</h3>
+
+        <p>Enjoy the excitement of cricket!</p>
+
+        <p>Contact: support@iplbooking.com</p>
+
+        <p>© 2026 IPL Ticket Booking. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <!-- TOAST NOTIFICATION -->
     <div id="toast" role="status" aria-live="polite"></div>
 
-    <!-- JavaScript File -->
+
+    <!-- JAVASCRIPT -->
     <script src="app.js"></script>
 
 </body>

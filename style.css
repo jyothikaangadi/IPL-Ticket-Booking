@@ -1,345 +1,275 @@
 
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+/* ==========================================
+   GENERAL STYLING
+========================================== */
 
-/* Universal Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #0b1020;
-    color: #ffffff;
-    line-height: 1.7;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
 }
 
-/* Header */
+
+/* ==========================================
+   HEADER & NAVIGATION
+========================================== */
+
 header {
-    background: rgba(15, 20, 40, 0.95);
-    padding: 20px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    border-bottom: 1px solid #292e4a;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 header h1 {
-    font-size: 26px;
-    font-weight: 800;
-    color: #ff7a18;
-    letter-spacing: 1px;
+    color: #ff6b00;
+    margin-bottom: 15px;
 }
 
-/* Navigation */
 nav ul {
-    display: flex;
     list-style: none;
-    gap: 28px;
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
-nav a {
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #d6d9e8;
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
-nav a:hover {
-    color: #ff7a18;
+nav ul li a:hover {
+    color: #ff6b00;
 }
 
-/* Main Sections */
-main section {
-    padding: 70px 10%;
-    margin: 30px auto;
-    max-width: 1400px;
+
+/* ==========================================
+   SECTIONS
+========================================== */
+
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1100px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
 }
 
-/* Welcome Section */
-#home {
-    min-height: 420px;
-    background: linear-gradient(
-        135deg,
-        #21104d,
-        #45208c,
-        #151c3b
-    );
-    border-radius: 25px;
-    padding: 65px 8%;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+section h2 {
+    color: #b30000;
+    margin-bottom: 20px;
 }
+
+
+/* ==========================================
+   HOME SECTION
+========================================== */
 
 #home img {
-    width: 150px;
     margin-bottom: 20px;
-}
-
-#home h2 {
-    font-size: 42px;
-    font-weight: 800;
-    margin-bottom: 20px;
-    color: #ffffff;
 }
 
 #home p {
-    max-width: 700px;
-    color: #d8d7f2;
-    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 15px auto 25px;
 }
 
-/* Buttons */
-button {
-    background: linear-gradient(135deg, #ff7a18, #ffb347);
-    color: #111;
-    padding: 13px 28px;
-    border: none;
-    border-radius: 10px;
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s ease;
-    margin: 8px 8px 8px 0;
+#home button {
+    margin: 10px;
 }
 
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 122, 24, 0.3);
-}
 
-/* Section Headings */
-section h2 {
-    font-size: 30px;
-    margin-bottom: 30px;
-    color: #ff9b3d;
-    font-weight: 700;
-}
+/* ==========================================
+   POPULAR TEAMS
+========================================== */
 
-/* Popular Teams */
-section ul {
+#teams ul {
     list-style: none;
 }
 
-section:not(#home):not(#matches):not(#book):not(#booking):not(#guidelines) ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+#teams ul li {
+    padding: 5px;
 }
 
-section:not(#home):not(#matches):not(#book):not(#booking):not(#guidelines) li {
-    background: #171d35;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #292e4a;
-    transition: 0.3s;
-}
 
-section:not(#home):not(#matches):not(#book):not(#booking):not(#guidelines) li:hover {
-    background: #252d4b;
-    transform: translateY(-5px);
-}
-
-/* Match Schedule */
-#matches {
-    background: #131a30;
-    border-radius: 20px;
-    overflow-x: auto;
-}
+/* ==========================================
+   MATCH TABLE
+========================================== */
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    border-radius: 12px;
-    overflow: hidden;
+    background-color: white;
 }
 
 caption {
-    padding: 15px;
-    color: #c8cde0;
-    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
 }
 
-thead {
-    background: linear-gradient(135deg, #6d28d9, #9333ea);
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
 }
 
 th {
-    padding: 18px;
-    text-align: left;
+    background-color: #222;
     color: white;
 }
 
-td {
-    padding: 18px;
-    border-bottom: 1px solid #292e4a;
-    color: #d6d9e8;
+tr:nth-child(even) {
+    background-color: #f5f5f5;
 }
 
-tbody tr {
-    background: #171d35;
-    transition: 0.3s;
-}
 
-tbody tr:hover {
-    background: #252d4b;
-}
+/* ==========================================
+   BUTTONS
+========================================== */
 
-/* Booking Form */
-#book {
-    background: #131a30;
-    border-radius: 20px;
-}
-
-form {
-    max-width: 650px;
-}
-
-label {
-    display: inline-block;
-    margin-bottom: 8px;
-    color: #dce0f2;
-    font-weight: 500;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="number"] {
-    width: 100%;
-    padding: 14px 16px;
-    margin-bottom: 22px;
-    background: #0b1020;
-    border: 1px solid #303957;
-    border-radius: 10px;
+button {
+    background-color: #ff6b00;
     color: white;
-    font-family: inherit;
-    font-size: 14px;
-    outline: none;
-    transition: 0.3s;
-}
-
-input:focus {
-    border-color: #9333ea;
-    box-shadow: 0 0 10px rgba(147, 51, 234, 0.2);
-}
-
-input::placeholder {
-    color: #7f88a5;
-}
-
-/* Match Radio Buttons */
-input[type="radio"] {
-    accent-color: #ff7a18;
-    margin: 10px 8px 10px 0;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 15px;
+    margin: 5px;
+    transition: 0.3s;
 }
 
-/* My Booking */
-#booking {
-    background: linear-gradient(135deg, #171d35, #222044);
-    border-radius: 20px;
+button:hover {
+    background-color: #b30000;
 }
 
-#booking p {
-    color: #c8cde0;
-    margin-bottom: 25px;
+
+/* ==========================================
+   BOOKING FORM
+========================================== */
+
+#bookingForm {
+    max-width: 550px;
+    margin: auto;
+    padding: 25px;
+    text-align: left;
+    background-color: #f9f9f9;
+    border-radius: 10px;
 }
 
-/* Guidelines */
-#guidelines {
-    background: #131a30;
-    border-radius: 20px;
+#bookingForm label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
+
+#bookingForm input,
+#bookingForm select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus {
+    outline: 2px solid #ff6b00;
+}
+
+#bookingForm button {
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   ACTIVITY 7 - SUMMARY CARD
+========================================== */
+
+#summaryCard {
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 25px;
+
+    background-color: #fff4e8;
+    border: 2px solid #ff6b00;
+    border-radius: 12px;
+
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s ease;
+}
+
+#summaryCard h3 {
+    color: #b30000;
+    margin-bottom: 15px;
+}
+
+#summaryCard p {
+    margin: 12px 0;
+    font-size: 16px;
+}
+
+.total-price {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+#summaryTotal {
+    color: #b30000;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   MY BOOKING SECTION
+========================================== */
+
+#booking input {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* ==========================================
+   GUIDELINES
+========================================== */
 
 #guidelines ol {
-    padding-left: 25px;
+    display: inline-block;
+    text-align: left;
 }
 
 #guidelines li {
-    color: #d6d9e8;
-    padding: 10px 0;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 45px 20px;
-    background: #070b16;
-    border-top: 1px solid #292e4a;
-}
-
-footer h3 {
-    color: #ff7a18;
-    font-size: 22px;
-    margin-bottom: 12px;
-}
-
-footer p {
-    color: #8d96b3;
     margin: 8px 0;
-    font-size: 14px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
 
-    header {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
+/* ==========================================
+   TOAST NOTIFICATION
+========================================== */
 
-    nav ul {
-        justify-content: center;
-        gap: 15px;
-    }
-
-    main section {
-        padding: 40px 6%;
-        margin: 20px 12px;
-    }
-
-    #home h2 {
-        font-size: 30px;
-    }
-
-    section h2 {
-        font-size: 24px;
-    }
-
-    table {
-        min-width: 550px;
-    }
-
-    button {
-        width: 100%;
-        margin: 8px 0;
-    }
-}
-
-/* Activity 5 - Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Match Schedule Book Buttons */
-.book-btn {
-    cursor: pointer;
-    padding: 10px 18px;
-}
-
-/* Toast Notification */
 #toast {
     visibility: hidden;
     opacity: 0;
@@ -366,8 +296,60 @@ html {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Display Toast */
 #toast.show {
     visibility: visible;
     opacity: 1;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+footer h3 {
+    color: #ff6b00;
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 25px 15px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+
+    #bookingForm {
+        padding: 15px;
+    }
+
+    #summaryCard {
+        padding: 15px;
+    }
 }
