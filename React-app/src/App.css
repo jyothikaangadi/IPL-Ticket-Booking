@@ -1,0 +1,378 @@
+
+/* NAVIGATION BAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background-color: #111;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo-icon {
+    font-size: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #ffb000;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #750000, #d71920, #ff6b00);
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-label {
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: #ffcf70;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+}
+
+.primary-btn {
+    background-color: #ffca28;
+    color: #222;
+}
+
+.secondary-btn {
+    background-color: white;
+    color: #b30000;
+}
+
+/* TABLET AND MOBILE */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-links {
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+}
+
+/* MATCH SCHEDULE SECTION */
+
+.matches-section {
+    padding: 50px 7%;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.matches-section h2 {
+    color: #b30000;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.matches-description {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* TEAM FILTER */
+
+.filter-container {
+    margin-bottom: 30px;
+}
+
+.filter-container label {
+    font-weight: bold;
+}
+
+.filter-container select {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* MATCH CARDS */
+
+.matches-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.match-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 5px solid #b30000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+}
+
+.match-card h3 {
+    color: #b30000;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.match-card p {
+    margin: 12px 0;
+    color: #333;
+}
+
+/* BOOK TICKETS BUTTON */
+
+.match-book-btn {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.match-book-btn:hover {
+    background-color: #800000;
+}
+
+/* SELECTED MATCH */
+
+.selected-match {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #b30000;
+}
+
+/* RESPONSIVE MATCH CARDS */
+
+@media (max-width: 800px) {
+    .matches-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .matches-container {
+        grid-template-columns: 1fr;
+    }
+
+    .matches-section {
+        padding: 35px 5%;
+    }
+
+    .matches-section h2 {
+        font-size: 26px;
+    }
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background-color: #111;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo-icon {
+    font-size: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #ffb000;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #750000, #d71920, #ff6b00);
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-label {
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: #ffcf70;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+}
+
+.primary-btn {
+    background-color: #ffca28;
+    color: #222;
+}
+
+.secondary-btn {
+    background-color: white;
+    color: #b30000;
+}
+
+/* RESPONSIVE NAVBAR AND HERO */
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+}
